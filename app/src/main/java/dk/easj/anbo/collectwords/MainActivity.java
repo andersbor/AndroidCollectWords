@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /*
+/*
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     */
 
     public void clickedSave(View view) {
-        EditText input = findViewById(R.id.word_input);
+        EditText input = findViewById(R.id.mainwordedittext);
         String word = input.getText().toString();
         words.add(word);
         input.setText("");
@@ -46,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
     public void clickedShow(View view) {
         // Toast.makeText(this, words.toString(), Toast.LENGTH_LONG).show();
         TextView output = findViewById(R.id.textview_message);
-        output.setText(words.toString());
+        if (words.isEmpty()) {
+            output.setText("empty");
+        } else {
+            output.setText(words.toString());
+        }
     }
 }

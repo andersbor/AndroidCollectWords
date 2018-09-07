@@ -14,17 +14,17 @@
         android:text="Type a word" />
 
     <EditText
-        android:id="@+id/word_input"
+        android:id="@+id/mainwordedittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/heading"
-        android:inputType="" />
+        android:inputType="text" />
 
     <Button
         android:id="@+id/button_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/word_input"
+        android:layout_below="@id/mainwordedittext"
         android:onClick="clickedSave"
         android:text="Save" />
 
