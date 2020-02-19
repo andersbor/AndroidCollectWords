@@ -1,7 +1,5 @@
 package dk.easj.anbo.collectwords;
 
-import android.content.Context;
-import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -37,19 +35,19 @@ public class ExampleInstrumentedTest {
         //assertEquals("dk.easj.anbo.collectwords", appContext.getPackageName());
 
         onView(withText("Type a word")).check(matches(isDisplayed()));
-        onView(withId(R.id.mainwordedittext)).perform(typeText("Anders"));
-        onView(withId(R.id.button_save)).perform(click());
-        onView(withId(R.id.button_Show)).perform(click());
-        onView(withId(R.id.textview_message)).check(matches(withText(("[Anders]"))));
+        onView(withId(R.id.mainWordEdittext)).perform(typeText("Anders"));
+        onView(withId(R.id.mainButtonSave)).perform(click());
+        onView(withId(R.id.mainButtonShow)).perform(click());
+        onView(withId(R.id.mainMessageTextview)).check(matches(withText(("[Anders]"))));
 
-        onView(withId(R.id.mainwordedittext)).perform(typeText("Peter"));
-        onView(withId(R.id.button_save)).perform(click());
-        onView(withId(R.id.button_Show)).perform(click());
-        onView(withId(R.id.textview_message)).check(matches(withText(("[Anders, Peter]"))));
+        onView(withId(R.id.mainWordEdittext)).perform(typeText("Peter"));
+        onView(withId(R.id.mainButtonSave)).perform(click());
+        onView(withId(R.id.mainButtonShow)).perform(click());
+        onView(withId(R.id.mainMessageTextview)).check(matches(withText(("[Anders, Peter]"))));
 
-        onView(withId(R.id.button_clear)).perform(click());
-        onView(withId(R.id.button_Show)).perform(click());
-        onView(withId(R.id.textview_message)).check(matches(withText("empty")));
+        onView(withId(R.id.mainButtonClear)).perform(click());
+        onView(withId(R.id.mainButtonShow)).perform(click());
+        onView(withId(R.id.mainMessageTextview)).check(matches(withText("empty")));
     }
 
     @Test

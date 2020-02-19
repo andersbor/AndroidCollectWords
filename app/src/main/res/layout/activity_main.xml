@@ -14,40 +14,38 @@
         android:text="Type a word" />
 
     <EditText
-        android:id="@+id/mainwordedittext"
+        android:id="@+id/mainWordEdittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/heading"
         android:inputType="text" />
 
     <Button
-        android:id="@+id/button_save"
+        android:id="@+id/mainButtonSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mainwordedittext"
         android:onClick="clickedSave"
         android:text="Save" />
 
     <Button
-        android:id="@+id/button_clear"
+        android:id="@+id/mainButtonClear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_save"
         android:onClick="clickedClear"
         android:text="Clear" />
 
     <Button
-        android:id="@+id/button_Show"
+        android:id="@+id/mainButtonShow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_clear"
+        android:layout_below="@id/mainButtonClear"
         android:onClick="clickedShow"
         android:text="Show" />
 
     <TextView
-        android:id="@+id/textview_message"
+        android:id="@+id/mainMessageTextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_Show" />
+        android:layout_below="@id/mainButtonShow" />
 
 </LinearLayout>
