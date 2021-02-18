@@ -1,6 +1,7 @@
 package dk.easj.anbo.collectwords;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,9 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    
 
-/*
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         words = savedInstanceState.getCharSequenceArrayList(LIST);
     }
-    */
+
 
     public void clickedSave(View view) {
         EditText input = findViewById(R.id.mainWordEdittext);
@@ -56,4 +55,5 @@ public class MainActivity extends AppCompatActivity {
             output.setText(words.toString());
         }
     }
+
 }
